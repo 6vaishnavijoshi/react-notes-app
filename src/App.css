@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.app {
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
