@@ -5,6 +5,14 @@ import NoteList from "./components/NoteList";
 function App() {
   const [notes, setNotes] = useState([]);
 
+  const deleteNote = (indexToDelete) => {
+    const updatedNotes = notes.filter(
+      (_, index) => index !== indexToDelete
+    );
+
+    setNotes(updatedNotes);
+  };
+
   return (
     <div className="app">
       <h1>Notes App</h1>
@@ -14,7 +22,10 @@ function App() {
         setNotes={setNotes}
       />
 
-      <NoteList notes={notes} />
+      <NoteList
+        notes={notes}
+        deleteNote={deleteNote}
+      />
     </div>
   );
 }

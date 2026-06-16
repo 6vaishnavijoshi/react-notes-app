@@ -1,10 +1,18 @@
-function NoteList({ notes }) {
+function NoteList({ notes, deleteNote }) {
   return (
     <div>
       {notes.map((note, index) => (
-        <p key={index}>
-          {note}
-        </p>
+        <div key={index}>
+          <p>{note}</p>
+
+          <button
+            onClick={() =>
+              deleteNote(index)
+            }
+          >
+            Delete
+          </button>
+        </div>
       ))}
     </div>
   );
