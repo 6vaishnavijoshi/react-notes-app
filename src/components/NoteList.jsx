@@ -1,7 +1,11 @@
-function NoteList() {
+function NoteList({ notes }) {
   return (
     <div>
-      <p>No Notes Yet</p>
+      {notes.map((note, index) => (
+        <p key={index}>
+          {note}
+        </p>
+      ))}
     </div>
   );
 }
